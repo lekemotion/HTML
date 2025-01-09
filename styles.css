@@ -54,8 +54,8 @@ main{
 }
 
 header {
-    grid-column: 2 / span 6; /*ให้ header อยู่ที่ colum 2 อันอื่นๆไปอยู่ท้ายสุด*/
-
+    grid-column: 1 / span 7; /*ให้ header อยู่ที่ colum 2 อันอื่นๆไปอยู่ท้ายสุด*/
+    margin-left: 5%;
     }
 
     nav{
@@ -73,6 +73,11 @@ header {
         font-weight: 400;
         transition: var(--transition); /*action*/
     }
+
+    .links a{
+        margin-right: 20px; /*เว้นระยะช่องไฟ*/
+    }
+
     .links a:hover{
         color: var(--accentHover); /*เอาเม้าส์ชีแล้วเปลี่ยนสี*/
     }
@@ -81,4 +86,127 @@ header {
         border: none;
         background-color: var(--accent); /*สีฟื้นหลังกรอป login*/
         padding: 9px 25px; /*ปรับขนาดกรอบ login*/
+        transition: var(--transition);/*ลูกเล่น ซูมเข้าออก*/
     }
+
+    .button_med:hover{
+        color: var(--accentHover);
+    }
+
+    .info{
+        grid-column: 3 / span 4;/*ย้ายชิ้นเริ่มที่ 3 ที่เหลือไป 4 จากทั้งหมด 6*/
+        margin-top: 23%;
+        text-align: center;
+    }
+
+    .content_font1{
+        font-family: "Lato", sans-serif;
+        color: rgba(241, 234, 234, 0.562);
+        font-size: 4.0rem;
+    }
+
+    .content_font2{
+        font-family: "Lato", sans-serif;
+        color: var(--light);
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .icons{
+        margin-top: 10%;
+        display: flex; /*จัดให้เป็นแนวนอน*/
+
+    }
+
+    .icon{
+        margin-right: 40px; /*ระยะห่างช่องไฟ*/
+        
+    }
+
+    .icon img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .icon_info{
+        text-align: center;
+    }
+
+    .features{
+        grid-column: 2 / span 7;
+        background-color:#7A4021 ;
+        margin-top: 7%;
+        /*top right botton left การเรียงตอนปรับขนาดในกรอบใหญ่*/
+        padding: 30px 0px 0px 20px;
+        display: flex;
+        align-items: left;
+    }
+
+    .feature{
+        display: flex;
+        /*top right botton left*/
+        margin: 0px 10px 30px 10px;
+    }
+
+    .feature img{
+        width: 80px;
+        height: 80px;
+        margin-right: 20px;
+    }
+
+    .feature_info p{
+        color: azure;
+    }
+
+.feature_top, .feature_More{
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.feature_botton{
+    font-size: 15px;
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.feature:nth-child(3){
+    align-self: flex-start;
+}
+
+.feature_more{
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.feature_more:hover{
+    color: var(--accent);
+}
+
+/*Responsive Website*/
+@media only screen and (max-width:1100px){
+    .icon img{
+        height: 300px;
+        width: auto;
+    }
+    .content_font1, .content_font2{
+        font-size: 2.75rem;
+    }
+    .feature{
+        grid-column: 1 / span 7;
+    }
+}
+
+@media only screen and (max-width:850){
+    .info{
+        grid-column: 2 /span 7;
+    }
+    .icons{
+        flex-direction: column;
+    }
+    .content_font1, .content_font2{
+        font-size: 1.75rem;
+    }
+    
+}
