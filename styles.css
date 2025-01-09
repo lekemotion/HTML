@@ -71,5 +71,14 @@ header {
     .links a, .links button{
         font-size: 1.5rem;
         font-weight: 400;
-        transition: var(--transition);
+        transition: var(--transition); /*action*/
+    }
+    .links a:hover{
+        color: var(--accentHover); /*เอาเม้าส์ชีแล้วเปลี่ยนสี*/
+    }
+
+    .button_med{
+        border: none;
+        background-color: var(--accent); /*สีฟื้นหลังกรอป login*/
+        padding: 9px 25px; /*ปรับขนาดกรอบ login*/
     }
