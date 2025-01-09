@@ -1,0 +1,75 @@
+/*add google front*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/*all class useing same dataset*/
+:root{
+    /*ประกาศค่าตัวแปร*/
+    --accent : #615E5E; /*button color form figma*/
+    --accentHover : #938E8E; /*mouse hover -> light*/
+    --dark60 : rgba(66, 64, 64, 0.6); /*0.6 = 60%*/
+    --light : #FFFFFF ;
+    --transition : all 0.3s ease 0s /*define delay time*/
+}
+
+/*all section*/
+*{
+    /*clear margin and padding*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+html, body{
+    height: 100%;/*fix Height useing Scroll*/
+    overflow: auto;
+}
+
+body{
+    /*gradient shade of color*/
+    /*background: linear-gradient(
+        var(--dark60), var(--dark60)
+    ),url(./images/Blackgroud.jpg);*/
+    background-image: url(./images/Blackgroud.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /*Fix scall screen*/
+}
+
+a, button, p{
+    font-family: "Lato", sans-serif;
+    color: var(--light);
+}
+
+a, button, .logo{
+    cursor: pointer; /*link Element -> Hand Curser*/
+}
+
+main{
+    height: 100;
+    display: grid;
+    grid-template-columns: minmax(60px, 1fr) repeat(6, minmax(50px, 190px))
+    minmax(60px, 1fr);
+    
+}
+
+header {
+    grid-column: 2 / span 6; /*ให้ header อยู่ที่ colum 2 อันอื่นๆไปอยู่ท้ายสุด*/
+
+    }
+
+    nav{
+        display: flex;
+        align-items: center;
+        height: 150px;
+    }
+    /*class*/
+
+    .links{
+        margin-left: auto;
+    }
+    .links a, .links button{
+        font-size: 1.5rem;
+        font-weight: 400;
+        transition: var(--transition);
+    }
