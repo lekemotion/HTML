@@ -108,7 +108,7 @@ header {
     .content_font2{
         font-family: "Lato", sans-serif;
         color: var(--light);
-        font-size: 1.5rem;
+        font-size: 1.0;
         text-align: center;
     }
 
@@ -185,28 +185,34 @@ header {
 }
 
 /*Responsive Website*/
-/*@media only screen and (max-width:1100px){
+@media only screen and (max-width:1100px){
     .icon img{
-        height: 300px;
+        height: 100px;
         width: auto;
     }
-    .content_font1, .content_font2{
+    .content_font1{
         font-size: 2.75rem;
+    }
+    .content_font2{
+        font-size: 1.25rem;
     }
     .feature{
         grid-column: 1 / span 7;
     }
 }
 
-@media only screen and (max-width:850){
+@media only screen and (max-width:850px) {
     .info{
         grid-column: 2 /span 7;
     }
     .icons{
         flex-direction: column;
     }
-    .content_font1, .content_font2{
+    .content_font1{
         font-size: 1.75rem;
+    }
+    .content_font2{
+        font-size: 0.75rem;
     }
     .features{
         flex-direction: column;
