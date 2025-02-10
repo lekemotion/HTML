@@ -26,10 +26,8 @@ html, body{
 }
 
 body{
-    /*gradient shade of color*/
-    /*background: linear-gradient(
-        var(--dark60), var(--dark60)
-    ),url(./images/Blackgroud.jpg);*/
+    /*gradient shade of color
+    background: linear-gradient(var(--dark60), var(--dark60)),url(./images/Blackgroud.jpg);*/
     background-image: url(./images/Blackgroud.jpg);
     background-repeat: no-repeat;
     background-position: center;
